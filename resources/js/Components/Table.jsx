@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import "dayjs/locale/id";
+
+dayjs.extend(utc);
+dayjs.locale("id");
 
 const Table = ({ data }) => {
     // config pagination
@@ -31,9 +36,9 @@ const Table = ({ data }) => {
                             <td>{item.suhu}</td>
                             <td>{item.kelembaban}</td>
                             <td>
-                                {dayjs(item.created_at).format(
-                                    "DD MMMM YYYY | HH:mm:ss"
-                                )}
+                                {dayjs(item.created_at)
+                                    .utc(false)
+                                    .format("DD MMMM YYYY | HH:mm:ss")}
                             </td>
                         </tr>
                     ))}

@@ -21,7 +21,10 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
+        "chart.js": "^4.4.3",
+        "chartjs-plugin-zoom": "^2.0.1",
         "dayjs": "^1.11.11",
+        "react-chartjs-2": "^5.2.0",
         "react-icons": "^5.1.0"
     }
 }

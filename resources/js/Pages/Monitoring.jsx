@@ -1,3 +1,4 @@
+import CustomChart from "@/Components/CustomChart";
 import Navbar from "@/Components/Navbar";
 import Table from "@/Components/Table";
 import { Head } from "@inertiajs/react";
@@ -29,11 +30,17 @@ const Monitoring = (props) => {
         <>
             <Head title="Monitoring" />
             <Navbar user={props.auth.user} />
-            <div className="w-full min-h-screen flex flex-col justify-center items-center gap-8 pb-20">
+            <div className="w-full min-h-screen flex flex-wrap justify-center md:gap-4 items-center gap-8 pb-20 px-10">
                 {loading ? (
                     <span className="loading loading-spinner loading-lg"></span>
                 ) : (
-                    <Table data={data} />
+                    <>
+                        <CustomChart data={data} />
+
+                        <div className="max-w-[50%]">
+                            <Table data={data} />
+                        </div>
+                    </>
                 )}
             </div>
         </>
