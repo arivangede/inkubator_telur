@@ -79,8 +79,8 @@ const CustomChart = ({ data }) => {
     };
 
     return (
-        <div className="w-[50%] justify-center items-center">
-            <h2 className="text-3xl font-semibold text-center text-slate-700">
+        <div className="md:w-[50%] w-full justify-center items-center">
+            <h2 className="md:text-3xl text-2xl font-semibold text-center text-slate-700">
                 Grafik Rata-Rata Suhu dan Kelembaban/Hari
             </h2>
             {chartData ? (

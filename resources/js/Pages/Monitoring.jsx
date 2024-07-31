@@ -30,14 +30,14 @@ const Monitoring = (props) => {
         <>
             <Head title="Monitoring" />
             <Navbar user={props.auth.user} />
-            <div className="w-full min-h-screen flex flex-wrap justify-center md:gap-4 items-center gap-8 pb-20 px-10">
+            <div className="w-full min-h-screen flex flex-wrap justify-center md:gap-4 items-center gap-8 pb-20">
                 {loading ? (
                     <span className="loading loading-spinner loading-lg"></span>
                 ) : (
                     <>
                         <CustomChart data={data} />
 
-                        <div className="max-w-[50%]">
+                        <div className="md:max-w-[50%]">
                             <Table data={data} />
                         </div>
                     </>
